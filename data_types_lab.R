@@ -5,7 +5,9 @@ questionOne <- c("character", "logical", "integer", "double")
 ########## Q2
 
 a <- 2 / 3
+
 print(a)
+
 aPrint <- 0.6666667
 
 numDigitsStart <- options()$digits
