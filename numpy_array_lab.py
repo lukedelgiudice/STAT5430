@@ -2,9 +2,7 @@ import numpy as np
 
 ########## 1
 
-my_array = np.arange(1, 11, 1)
-
-my_array = 1 / (2 ** my_array)
+my_array = 1 / (2 ** np.arange(1, 11, 1))
 
 ########## 2
 
@@ -22,11 +20,11 @@ reverse = nums[::-1]
 
 sum_these = np.exp(np.repeat(-1000, 10))
 
-sum_these > 0
+# sum_these > 0
 
 # These elements aren't nonzero
 
-np.sum(sum_these)
+# np.sum(sum_these)
 
 # You can sum them, but the sum isn't correct
 
@@ -34,7 +32,7 @@ all_good = False
 
 lower_bound = 0
 
-upper_bound = 0.39901297
+upper_bound = 0.567143290409784
 
 naive_log_sum = np.log(np.sum(sum_these))
 
