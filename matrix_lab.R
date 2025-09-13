@@ -24,15 +24,10 @@ N <- 20
 
 xbar <- (1 / N) * t(data) %*% rep(1, N)
 
-mySampCov <- (1 / N - 1) * t(data - rep(t(xbar), 20)) %*%  (data - rep(t(xbar), 20))
+# colMeans(data)
 
+centered_data <- (data - matrix(rep(t(xbar), times = 20), nrow = 20, byrow = TRUE))
 
-cov(data)
+mySampCov <- (1 / (N - 1)) * t(centered_data) %*% centered_data
 
-(data - rep(t(xbar), 20))
-
-(data[1,] - t(xbar))
-
-(data - t(rep((xbar), 20)))
-
-
+# cov(data)
