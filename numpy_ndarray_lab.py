@@ -13,8 +13,8 @@ log_dens2 = (-n/2) * np.log(2 * math.pi) - 0.5 * np.log(10 * 11 * 12) - 0.5 * np
 
 # you CAN do this without defining a numpy array for C (although, note that I did define an array of its diagonal elements)
 
-C = np.array([[10, -0.9, -0.9], [-0.9, 11, -0.9], [-0.9, -0.9, 12]])
+C_matrix = np.array([[10, -0.9, -0.9], [-0.9, 11, -0.9], [-0.9, -0.9, 12]])
 
-log_dens3 = (-n/2) * np.log(2 * math.pi) - 0.5 * np.log(np.linalg.det(C)) - 0.5 * float((x - m).T @ np.linalg.inv(C) @ (x - m)) 
+log_dens3 = (-n/2) * np.log(2 * math.pi) - 0.5 * np.log(np.linalg.det(C_matrix)) - 0.5 * float((x - m).T @ np.linalg.inv(C_matrix) @ (x - m))
 
 # you can NOT do this without defining a numpy array for C (since C is not diagonal anymore)
